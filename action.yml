@@ -1,0 +1,21 @@
+name: 'Static Upload Action'
+description: 'Example action'
+
+inputs:
+  config:
+    description: 'YAML configuration file'
+    required: false
+  root:
+    description: 'Relative path under $GITHUB_WORKSPACE to place the repository'
+    required: false
+  prefix:
+    description: 'The prefix to add to uploaded resources'
+    required: false
+#   TODO: Add support for bucket & config
+#  bucket:
+#    description: 'S3/GCS bucket to upload assets to'
+#    required: true
+
+runs:
+  using: 'node16'
+  main: 'lib/index.js'
